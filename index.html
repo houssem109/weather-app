@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <title>weather App</title>
+  </head>
+  <body
+    class="bg-gradient-to-br from-[#383838] h-[100hw] bg-no-repeat w-[100wv]"
+  >
+    <div>
+      <div name="container" class="flex pt-5">
+        <div
+          name="search-box"
+          class="ml-[114px] flex w-[1000px] h-12 bg-[#444] shadow-[0px_4px_40px_0px_rgba(0,0,0,0.5)] rounded-full"
+        >
+          <i
+            class="bx bx-search text-4xl ml-3 mt-2 text-[rgba(255,255,255,0.60)]"
+          ></i>
+          <input
+            type="text"
+            class="bg-transparent ml-4 outline-none text-[rgba(255,255,255,0.60)] w-full"
+            placeholder="search for your preffered city..."
+          />
+        </div>
+        <div class="ml-12">
+          <button
+            class="flex items-center h-12 w-56 px-5 py-3 bg-[#4CBB17] text-white font-semibold rounded-full hover:bg-[#4EAA1E]"
+          >
+            <img
+              src="/targetlocation.png"
+              class="w-6 h-6 mt-[2px] mr-3"
+            />Current Location
+          </button>
+        </div>
+      </div>
+
+      <div class="mt-9 flex max-h-[430px]">
+        <div
+          class="w-[430px] h-72 ml-24 bg-[#444444] p-9 rounded-[30px] shadow-[10px_8px_5px_0px_rgba(0,0,0,0.3)]"
+        >
+          <div class="text-center">
+            <p class="text-white text-3xl font-bold">Tunisia</p>
+            <p class="text-6xl font-bold text-white mt-10">09:03</p>
+            <p class="text-lg text-white font mt-5">Thursday, 31 Aug</p>
+          </div>
+        </div>
+
+        <div
+          class="w-[820px] h-72 ml-10 bg-[#444444] pl-4 rounded-[30px] shadow-[10px_8px_5px_0px_rgba(0,0,0,0.3)] pt-1"
+        >
+          <div class="flex flex-row">
+            <div>
+              <p
+                class="text-[70px] pl-3 font-bold absolute text-transparent bg-clip-text bg-gradient-to-bl from-[#383838] to-white"
+              >
+                24°C
+              </p>
+              <p
+                class="text-xl font-semibold pl-4 text-[rgba(255,255,255,0.80)] mt-20"
+              >
+                Feels like: <span class="font-semibold text-3xl"> 22°C</span>
+              </p>
+              <div class="flex pt-2 mt-4 ml-5">
+                <img src="/sunrise-white.png" alt="" class="w-11 h-11" />
+                <div class="text-white pl-3 font-semibold">
+                  <p class="text-xl">Sunrise</p>
+                  <p class="text-base">06:37 AM</p>
+                </div>
+              </div>
+              <div class="flex ml-5 pt-4">
+                <img src="/sunset-white.png" alt="" class="w-11 h-11" />
+                <div class="text-white pl-3 font-semibold">
+                  <p class="text-xl">Sunset</p>
+                  <p class="text-base">06:37 AM</p>
+                </div>
+              </div>
+            </div>
+            <div class="ml-16">
+              <img src="/sun.png" alt="" class="h-56" />
+              <p class="text-white text-center text-3xl font-semibold">sunny</p>
+            </div>
+            <div class="mt-7 ml-14 text-white text-center flex-col h-[250px]">
+              <img src="/humidity.png" alt="" class="pl-1" />
+              <p class="font-semibold mt-2">41%</p>
+              <p>Humidity</p>
+              <img src="/pressure-white.png" class="mt-2 pl-2" />
+              <p class="font-semibold mt-2">997hPa</p>
+              <p>Pressure</p>
+            </div>
+            <div class="mt-5 ml-16 text-white text-center flex-col h-[250px]">
+              <img src="/wind.png" alt="" class="pl-4" />
+              <p class="font-semibold mt-2">2km/h</p>
+              <p>Wind Speed</p>
+              <img src="/uv-white.png" class="mt-2 pl-5" />
+              <p class="font-semibold mt-2">8</p>
+              <p>UV</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="mt-9 flex max-h-[430px]">
+          <div
+            class="w-[410px] text-white h-90 ml-24 bg-[#444444] p-5 rounded-[30px] shadow-[10px_8px_5px_0px_rgba(0,0,0,0.3)]"
+          >
+            <p class="text-center text-3xl font-bold">5 Days Forecast:</p>
+            <div class="flex-col flex mt-2">
+              <div class="flex flex-row gap-11">
+                <img src="/clouds.png" alt="" />
+                <p class="font-semibold text-xl pt-5">20°C</p>
+                <p class="font-semibold text-xl pt-5">Friday, 1 Sep</p>
+              </div>
+              <div class="flex flex-row gap-11">
+                <img src="/mist.png" alt="" />
+                <p class="font-semibold text-xl pt-5">22°C</p>
+                <p class="font-semibold text-xl pt-5">Saturday, 2 Sep</p>
+              </div>
+              <div class="flex flex-row gap-11">
+                <img src="/sun2.png" alt="" />
+                <p class="font-semibold text-xl pt-5">27°C</p>
+                <p class="font-semibold text-xl pt-5">Sunday, 3 Sep</p>
+              </div>
+              <div class="flex flex-row gap-11">
+                <img src="/drizzle.png" alt="" />
+                <p class="font-semibold text-xl pt-5">18°C</p>
+                <p class="font-semibold text-xl pt-5">Monday, 4 Sep</p>
+              </div>
+              <div class="flex flex-row gap-11">
+                <img src="/rain.png" alt="" />
+                <p class="font-semibold text-xl pt-5">16°C</p>
+                <p class="font-semibold text-xl pt-5">Tuesday, 5 Sep</p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="w-[850px] h-90 ml-10 text-white bg-[#444444] pl-4 rounded-[30px] shadow-[10px_8px_5px_0px_rgba(0,0,0,0.3)] pt-5"
+          >
+            <p class="text-center text-3xl font-bold">Hourly Forecast:</p>
+            <div class="flex flex-row gap-4">
+              <div
+                class="flex gap-2 flex-col ml-14 mt-5 bg-[#373636] rounded-[40px] w-28 h-72"
+              >
+                <p class="font-semibold text-xl text-center pt-4">12:00</p>
+                <img src="/sun3.png" alt="" class="w-[80px] ml-4" />
+                <p class="font-semibold text-xl text-center">26°C</p>
+                <img
+                  src="/navigation1.png"
+                  class="w-[50px] ml-8"
+                  alt=""
+                />
+                <p class="font-semibold text-xl text-center">3km/h</p>
+              </div>
+              <div
+                class="flex gap-2 flex-col ml-6 mt-5 bg-[#373636] rounded-[40px] w-28 h-72"
+              >
+                <p class="font-semibold text-xl text-center pt-4">15:00</p>
+                <img src="/sun3.png" alt="" class="w-[80px] ml-4" />
+                <p class="font-semibold text-xl text-center">27°C</p>
+                <img
+                  src="/navigation1.png"
+                  class="w-[50px] ml-6 -rotate-[30deg]"
+                  alt=""
+                />
+                <p class="font-semibold text-xl text-center">2km/h</p>
+              </div>
+              <div
+                class="flex gap-2 flex-col ml-6 mt-5 bg-[#373636] rounded-[40px] w-28 h-72"
+              >
+                <p class="font-semibold text-xl text-center pt-4">18:00</p>
+                <img src="/clouds2.png" alt="" class="w-[80px] ml-4" />
+                <p class="font-semibold text-xl text-center">27°C</p>
+                <img
+                  src="/navigation1.png"
+                  class="w-[50px] ml-8"
+                  alt=""
+                />
+                <p class="font-semibold text-xl text-center">2km/h</p>
+              </div>
+              <div
+                class="flex gap-2 flex-col ml-6 mt-5 bg-[#373636] rounded-[40px] w-28 h-72"
+              >
+                <p class="font-semibold text-xl text-center pt-4">21:00</p>
+                <img src="/clouds2.png" alt="" class="w-[80px] ml-4" />
+                <p class="font-semibold text-xl text-center">25°C</p>
+                <img
+                  src="/navigation1.png"
+                  class="w-[50px] ml-8 rotate-[30deg]"
+                  alt=""
+                />
+                <p class="font-semibold text-xl text-center">3km/h</p>
+              </div>
+              <div
+                class="flex gap-2 flex-col ml-6 mt-5 bg-[#373636] rounded-[40px] w-28 h-72"
+              >
+                <p class="font-semibold text-xl text-center pt-4">00:00</p>
+                <img src="/sun3.png" alt="" class="w-[80px] ml-4" />
+                <p class="font-semibold text-xl text-center">22°C</p>
+                <img
+                  src="/navigation1.png"
+                  class="w-[50px] ml-8"
+                  alt=""
+                />
+                <p class="font-semibold text-xl text-center">3km/h</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br /><br />
+  </body>
+  <script src="index.js"></script>
+</html>
