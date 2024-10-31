@@ -27,11 +27,13 @@
             type="text"
             class="bg-transparent ml-4 outline-none text-[rgba(255,255,255,0.60)] w-full"
             placeholder="search for your preffered city..."
+            id="city-input"
           />
         </div>
         <div class="ml-12">
           <button
             class="flex items-center h-12 w-56 px-5 py-3 bg-[#4CBB17] text-white font-semibold rounded-full hover:bg-[#4EAA1E]"
+            onclick="callweather()"
           >
             <img
               src="/targetlocation.png"
@@ -46,9 +48,9 @@
           class="w-[430px] h-72 ml-24 bg-[#444444] p-9 rounded-[30px] shadow-[10px_8px_5px_0px_rgba(0,0,0,0.3)]"
         >
           <div class="text-center">
-            <p class="text-white text-3xl font-bold">Tunisia</p>
-            <p class="text-6xl font-bold text-white mt-10">09:03</p>
-            <p class="text-lg text-white font mt-5">Thursday, 31 Aug</p>
+            <p class="text-white text-3xl font-bold" id="city-name">Tunisia</p>
+            <p class="text-6xl font-bold text-white mt-10" id="current-time">09:03</p>
+            <p class="text-lg text-white font mt-5 " id="current-date">Thursday, 31 Aug</p>
           </div>
         </div>
 
@@ -58,6 +60,7 @@
           <div class="flex flex-row">
             <div>
               <p
+              id="temperature"
                 class="text-[70px] pl-3 font-bold absolute text-transparent bg-clip-text bg-gradient-to-bl from-[#383838] to-white"
               >
                 24°C
@@ -65,7 +68,7 @@
               <p
                 class="text-xl font-semibold pl-4 text-[rgba(255,255,255,0.80)] mt-20"
               >
-                Feels like: <span class="font-semibold text-3xl"> 22°C</span>
+                Feels like: <span class="font-semibold text-3xl" id="feels-like"> 22°C</span>
               </p>
               <div class="flex pt-2 mt-4 ml-5">
                 <img src="/sunrise-white.png" alt="" class="w-11 h-11" />
@@ -88,18 +91,18 @@
             </div>
             <div class="mt-7 ml-14 text-white text-center flex-col h-[250px]">
               <img src="/humidity.png" alt="" class="pl-1" />
-              <p class="font-semibold mt-2">41%</p>
+              <p class="font-semibold mt-2 " id="humidity">41%</p>
               <p>Humidity</p>
               <img src="/pressure-white.png" class="mt-2 pl-2" />
-              <p class="font-semibold mt-2">997hPa</p>
+              <p class="font-semibold mt-2" id="pressure">997hPa</p>
               <p>Pressure</p>
             </div>
             <div class="mt-5 ml-16 text-white text-center flex-col h-[250px]">
               <img src="/wind.png" alt="" class="pl-4" />
-              <p class="font-semibold mt-2">2km/h</p>
+              <p class="font-semibold mt-2" id="wind-speed">2km/h</p>
               <p>Wind Speed</p>
               <img src="/uv-white.png" class="mt-2 pl-5" />
-              <p class="font-semibold mt-2">8</p>
+              <p class="font-semibold mt-2" id="UV">8</p>
               <p>UV</p>
             </div>
           </div>
