@@ -1,5 +1,5 @@
 const APIkey = '3c6d79e604a2408cae0172002242910';
-const apiUrl = "http://api.weatherapi.com/v1/forecast.json?days=5&aqi=yes&alerts=no";
+const apiUrl = "http://api.weatherapi.com/v1/forecast.json?days=6&aqi=yes&alerts=no";
 let clockInterval; 
 async function fetchWeather(city) {
     try {
@@ -39,6 +39,7 @@ function updateTime(timezone) {
 
 // change  elements in interface
 function changeInterface(data) {
+//main part
    document.getElementById("city-name").textContent = `${data.location.name},${data.location.country}`
    document.getElementById("temperature").textContent = `${data.current.temp_c}°C`;
    document.getElementById("feels-like").textContent = `${data.current.feelslike_c}°C`;
@@ -46,16 +47,17 @@ function changeInterface(data) {
    document.getElementById("pressure").textContent = `${data.current.pressure_mb} hPa`;
    document.getElementById("wind-speed").textContent = `${data.current.wind_kph} km/h`;
    document.getElementById("UV").textContent = `${data.current.uv} `;
+   document.getElementById("weather-info").textContent = `${data.current.condition.text} `;
+   // icon  
+    document.getElementById("main-img").src = `${data.current.condition.icon}`;
 
+    // Sunrise and sunset 
+    document.getElementById("sunrise").textContent =`${data.forecast.forecastday[0].astro.sunrise}`
+    document.getElementById("sunset").textContent =  `${data.forecast.forecastday[0].astro.sunset}`
+// 5 Days Forecast
+    //day 1
+    
 
-    // Weather icon and description
-    const iconid = data.weather[0].icon;
-    document.getElementById("weather-icon").src = `http://openweathermap.org/img/wn/${iconid}@2x.png`;
-    document.getElementById("weather-description").textContent = data.weather[0].description;
-
-    // Sunrise and sunset times
-    document.getElementById("sunrise-time").textContent = new Date(data.sys.sunrise * 1000).toLocaleTimeString();
-    document.getElementById("sunset-time").textContent = new Date(data.sys.sunset * 1000).toLocaleTimeString();
 }
 
 function callweather(){
