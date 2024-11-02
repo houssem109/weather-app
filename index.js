@@ -122,7 +122,7 @@ function changeInterface(data) {
 
   const localTime = new Date(data.location.localtime); 
 const currentHour = localTime.getHours(); 
-const hourData = data.forecast.forecastday[0].hour;
+const hourata = data.forecast.forecastday[0].hour;
 
 
 let startindexD = 0; 
@@ -141,7 +141,7 @@ for (let i = 0; i < 5; i++) {
     let hour; 
     if (startindexD === 0) {
       
-        hour = hourData[hourIndex+3]; 
+        hour = hourata[hourIndex+3]; 
     } else {
        
         hour = data.forecast.forecastday[startindexD].hour[hourIndex % 24]; 
