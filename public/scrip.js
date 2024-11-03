@@ -1,6 +1,7 @@
 const APIkey = "3c6d79e604a2408cae0172002242910";
 const apiUrl =
-  "http://api.weatherapi.com/v1/forecast.json?days=6&aqi=yes&alerts=no";
+  "https://api.weatherapi.com/v1/forecast.json?days=6&aqi=yes&alerts=no";
+  
 let clockInterval;
 async function fetchWeather(city) {
   try {
