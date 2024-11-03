@@ -147,7 +147,7 @@ for (let i = 0; i < 5; i++) {
        
         hour = data.forecast.forecastday[startindexD].hour[hourIndex % 24]; 
     }
-    console.log(hour)
+    console.log(hour.time)
     const hourTime = new Date(hour.time).toLocaleTimeString("en-EN", {
       hour: "2-digit",
       minute: "2-digit",
