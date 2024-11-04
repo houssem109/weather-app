@@ -1,6 +1,6 @@
 const APIkey = "3c6d79e604a2408cae0172002242910";
 const apiUrl =
-  "https://api.weatherapi.com/v1/forecast.json?days=6&aqi=yes&alerts=no";
+  "http://api.weatherapi.com/v1/forecast.json?days=6&aqi=yes&alerts=no";
   
 let clockInterval;
 async function fetchWeather(city) {
@@ -130,24 +130,21 @@ let startindexD = 0;
 let startindexH = currentHour; 
 
 if (currentHour >= 21) {
-    
     startindexD = 1; 
-    startindexH = (currentHour - 21 ); 
+    startindexH = currentHour - 21 ; 
 }
 
 
 for (let i = 0; i < 5; i++) {
-    const hourIndex = startindexH + (i * 3); 
+  let hourIndex = startindexH + (i * 3); 
 
-    let hour; 
-    if (startindexD === 0) {
-      
-        hour = hourata[hourIndex+3]; 
-    } else {
-       
-        hour = data.forecast.forecastday[startindexD].hour[hourIndex % 24]; 
+    if (hourIndex >= 24) {
+          startindexD += 1; 
+          hourIndex = hourIndex % 24; 
     }
-    console.log(hour.time)
+    const hour =data.forecast.forecastday[startindexD].hour[hourIndex];
+
+    console.log(hour)
     const hourTime = new Date(hour.time).toLocaleTimeString("en-EN", {
       hour: "2-digit",
       minute: "2-digit",
